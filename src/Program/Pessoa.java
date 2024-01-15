@@ -15,29 +15,26 @@ public class Pessoa {
         counter += 1;
     }
 
-    public String getEmail() {
-        return email;
+    public static int getCounter() {
+        return counter;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public static void setCounter(int counter) {
+        Pessoa.counter = counter;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     public String getCPF() {
         return CPF;
     }
 
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
-    }
-
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
     public String toString(){
         return "\nNome: " + this.getNome() +
                 "\nCPF: " + this.getCPF() +
