@@ -1,6 +1,5 @@
 package Program;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -9,7 +8,7 @@ public class AgenciaBancaria {
     static ArrayList<Conta> contasBancarias;
 
     public static void main(String[] args) {
-        contasBancarias = new ArrayList<Conta>();
+        contasBancarias = new ArrayList<>();
         operacoes();
     }
     public static void operacoes(){
@@ -72,7 +71,7 @@ public class AgenciaBancaria {
     }
     private static Conta encontrarConta(int numeroConta) {
         Conta conta = null;
-        if (contasBancarias.size() > 0) {
+        if (!contasBancarias.isEmpty()) {
             for (Conta c : contasBancarias) {
                 if (c.getNumeroConta() == numeroConta) {
                     conta = c;
